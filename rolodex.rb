@@ -1,4 +1,9 @@
 class Rolodex
+
+
+  attr_reader :contacts
+
+
   def size
     @contacts.length
   end 
