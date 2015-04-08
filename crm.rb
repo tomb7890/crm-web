@@ -1,4 +1,5 @@
 require 'sinatra'
+require_relative 'contact'
 
 
 get '/' do
@@ -7,7 +8,10 @@ get '/' do
 end
 
 
-get '/contacts' do
-  @crm_app_name = "My CRM"
+get "/contacts" do
+  @contacts = []
+  @contacts << Contact.new("Yehuda", "Katz", "yehuda@example.com", "Developer", "10")
+  @contacts << Contact.new("Mark", "Zuckerberg", "mark@facebook.com", "CEO", "11")
+  @contacts << Contact.new("Sergey", "Brin", "sergey@google.com", "Co-Founder", "12")
   erb :contacts
 end
