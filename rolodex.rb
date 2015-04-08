@@ -18,6 +18,10 @@ class Rolodex
     c = Contact.new(@id, first_name, last_name, email, note)
     @contacts << c 
   end
+
+  def add_contact(first_name, last_name, email, note)
+    add(first_name, last_name, email, note)
+  end
   
   def modify_contact (id, first_name, last_name, email, note)
     contact = find(id)
