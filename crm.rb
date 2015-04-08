@@ -15,3 +15,8 @@ end
 get "/contacts" do
   erb :contacts
 end
+
+# as the last route, add
+get '/contacts/new' do
+  erb :new_contact
+end
