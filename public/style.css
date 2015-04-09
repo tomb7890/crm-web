@@ -1,0 +1,54 @@
+html {
+    font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+}
+
+title { text-align: center ; }
+
+footer, header {
+    font-size: 10px;
+    text-align: center;
+    padding: 2em;
+}
+
+nav {
+    width: 100%;
+    float: left;
+    margin: 0 0 3em 0;
+    padding: 0;
+    list-style: none; 
+}
+
+nav ul {
+  list-style: none;
+  text-align: center;
+  padding: 20px;
+  margin: 10px;
+  border: gray 1px solid;
+}
+
+nav li {
+    float: left; 
+  padding: 20px;
+  margin: 10px;
+  border: gray 1px solid;
+}
+
+#footer1 {
+    clear:both;
+    background:#cc9;
+}
+
+table td {font-size: 10px; border: 0;}
+table {font-size: 10px; border: 0;}
+
+#main {
+    float:right;
+    width:900px;
+}
+
+#sidebar {
+    float:left;
+    width:250px;
+}
+
+#main li { font-size: 60%; }
