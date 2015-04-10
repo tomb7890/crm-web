@@ -1,9 +1,20 @@
 require 'sinatra'
 require_relative 'contact'
 require_relative 'rolodex'
+require 'faker'
 
 
-$rolodex= Rolodex.new
+$rolodex = Rolodex.new
+
+19.times do 
+  $rolodex.add_contact(Faker::Name.first_name, 
+                       Faker::Name.last_name,
+                       Faker::Internet.email, 
+                       "#{Faker::Hacker.verb.capitalize } the 
+                       #{Faker::Hacker.adjective} 
+                       #{Faker::Hacker.noun}." ) 
+
+end
 
 
 get '/' do
@@ -11,9 +22,13 @@ get '/' do
   erb :index
 end
 
-
 get "/contacts" do
   erb :contacts
+end
+
+get "/contacts/1000" do
+  @contact = $rolodex.find(1001)
+  erb :show_contact
 end
 
 # as the last route, add
