@@ -60,6 +60,11 @@ class Rolodex
     c = find(id)
     c.send("#{attrib}=", val)
   end
+
+
+  def remove_contact(contact)
+    @contacts.delete(contact)
+  end
   
   def delete_contact id 
     id = id.to_i
