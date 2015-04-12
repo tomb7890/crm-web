@@ -1,6 +1,18 @@
-html {
+body {
     font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+    color: #C3C3C3;
+    background: #111;
+    font-family: 16px "Lato", sans-serif;
 }
+
+a {
+  color: #86D4B1;
+}
+
+a.highlight {
+  color: #fff;
+}
+
 
 title { text-align: center ; }
 
@@ -13,24 +25,45 @@ footer, header {
 nav {
     width: 100%;
     float: left;
-    margin: 0 0 3em 0;
+    margin: 3px;
     padding: 0;
-    list-style: none; 
+    list-style: none;
 }
 
 nav ul {
   list-style: none;
   text-align: center;
-  padding: 20px;
-  margin: 10px;
+  padding: 3px;
   border: gray 1px solid;
 }
 
 nav li {
-    float: left; 
-  padding: 20px;
-  margin: 10px;
+  float: left;
+
+  margin: 3px;
   border: gray 1px solid;
+}
+
+
+table td {font-size: 10px; border: 0;}
+table {font-size: 10px; border: 0;}
+
+#maincontainer{
+    width: 840px; /*Width of main container*/
+    margin: 0 auto; /*Center container on page*/
+}
+
+
+#main {
+    margin-left: 200px;
+
+}
+
+#sidebar {
+    float:left;
+    width:200px;
+    border:  #FFF 1px solid ;
+    background: #444;
 }
 
 #footer1 {
@@ -38,17 +71,12 @@ nav li {
     background:#cc9;
 }
 
-table td {font-size: 10px; border: 0;}
-table {font-size: 10px; border: 0;}
-
-#main {
-    float:right;
-    width:900px;
+#header1 {
+    float: right;
 }
 
-#sidebar {
-    float:left;
-    width:250px;
-}
+#main li { font-size: 80%; }
 
-#main li { font-size: 60%; }
+div {
+
+}

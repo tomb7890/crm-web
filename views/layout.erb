@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>Contacts-R-US</title>
-    <link rel="stylesheet" type="text/css" href="/style.css">
+        <link rel="stylesheet" type="text/css" href="/style.css">
     </head>
     <body>
 
@@ -10,21 +10,30 @@
             logo
         </header>
 
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
 
-        <%= yield %>
+        <div id="maincontainer" class="some_class">
+
+            <div id="header1" class="some_class">
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+
+            </div>
+            <div id="sidebar" class="some_class"></div>
+            <div id="main" class="some_class">
+                <%= yield %>
+            </div>
+            <div id="footer1" class="some_class"></div>
+        </div>
 
         <footer>
- site design / logo &copy; 2015 whizbang widgets inc; user contributions licensed under blah blah blah with attribution required
-rev 2015.4.9.2459 
+            site design / logo &copy; 2015 whizbang widgets inc; user contributions licensed under blah blah blah with attribution required
+            rev 2015.4.9.2459
         </footer>
 
     </body>
 </html>
-
