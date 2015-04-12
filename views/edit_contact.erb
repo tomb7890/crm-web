@@ -2,9 +2,30 @@
 
 <form action="/contacts/<%= @contact.id %>" method="post">
   <input type="hidden" name="_method" value="put">
-  <input type="text" name="first_name" value="<%= @contact.first_name %>">
-  <input type="text" name="last_name" value="<%= @contact.last_name %>">
-  <input type="text" name="email" value="<%= @contact.email %>">
-  <input type="text" name="note" value="<%= @contact.note %>">
+
+  <div id="some_id" class="field">
+    <label for="first_name">First Name</label>
+    <input id="first_name" type="text" name="first_name"
+           value="<%= @contact.first_name %>">
+  </div>
+
+
+  <div id="some_id" class="field">
+    <label for="last_name">Last Name</label>
+    <input id="last_name" type="text" name="last_name"
+           value="<%= @contact.last_name %>">
+  </div>
+
+  <div id="some_id" class="field">
+    <label for="email">email</label>
+    <input id="email" type="email" name="email"
+           value="<%= @contact.email %>">
+  </div>
+
+  <div id="some_id" class="field">
+    <label for="note">Note</label>
+    <input id="note" type="text" name="note"
+           value="<%= @contact.note %>">
+  </div>
   <input type="submit" name="Submit">
 </form>
