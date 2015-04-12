@@ -3,16 +3,15 @@ require_relative 'contact'
 require_relative 'rolodex'
 require 'faker'
 
-
 $rolodex = Rolodex.new
 
-19.times do 
-  $rolodex.add_contact(Faker::Name.first_name, 
+19.times do
+  $rolodex.add_contact(Faker::Name.first_name,
                        Faker::Name.last_name,
-                       Faker::Internet.email, 
-                       "#{Faker::Hacker.verb.capitalize } the 
-                       #{Faker::Hacker.adjective} 
-                       #{Faker::Hacker.noun}." ) 
+                       Faker::Internet.email,
+                       "#{Faker::Hacker.verb.capitalize } the
+                       #{Faker::Hacker.adjective}
+                       #{Faker::Hacker.noun}." )
 
 end
 
