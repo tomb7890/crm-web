@@ -1,19 +1,22 @@
 require 'sinatra'
-require_relative 'contact'
+
 require_relative 'rolodex'
 require 'faker'
+require 'data_mapper'
 
-$rolodex = Rolodex.new
+DataMapper.setup(:default, "sqlite3:database.sqlite3")
 
-19.times do
-  $rolodex.add_contact(Faker::Name.first_name,
-                       Faker::Name.last_name,
-                       Faker::Internet.email,
-                       "#{Faker::Hacker.verb.capitalize } the
-                       #{Faker::Hacker.adjective}
-                       #{Faker::Hacker.noun}." )
-
+class Contact
+  include DataMapper::Resource
+  property :id, Serial
+  property :first_name, String
+  property :last_name, String
+  property :email, String
+  property :note, String
 end
+
+DataMapper.finalize
+DataMapper.auto_upgrade!
 
 
 get '/' do
