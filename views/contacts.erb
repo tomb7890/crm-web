@@ -2,21 +2,19 @@
 <h1>Welcome to this CRM!</h1>
 <p>Main menu</p>
 <ul>
-  <li><a href="/contacts">View all contacts</a></li>
-  <!-- please complete me with links to other actions -->
+    <li><a href="/contacts">View all contacts</a></li>
 </ul>
 
 <h1>All Contacts</h1>
 
 <ul>
-  <% $rolodex.contacts.each do |contact| %>
-    <li>
-        <a href="/contacts/<%= contact.id %>">
-        <%= contact.first_name %> <%= contact.last_name %>
-        </a>
-        <%= contact.email %> <%= contact.note %>
-
-    </li>
-  <% end %>
+    <% @contacts.each do |contact| %>
+        <li>
+            <a href="/contacts/<%= contact.id %>">
+                <%= contact.first_name %>
+                <%= contact.last_name %>
+            </a>
+            <%= contact.email %> <%= contact.note %>
+        </li>
+    <% end %>
 </ul>
-
