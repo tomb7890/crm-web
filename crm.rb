@@ -1,6 +1,4 @@
 require 'sinatra'
-
-require_relative 'rolodex'
 require 'faker'
 require 'data_mapper'
 
@@ -18,19 +16,16 @@ end
 DataMapper.finalize
 DataMapper.auto_upgrade!
 
-
 get '/' do
-  @crm_app_name = "My CRM"
+  @crm_app_name = 'My CRM'
   erb :index
 end
 
-get "/contacts" do
+get '/contacts' do
   @contacts = Contact.all
   erb :contacts
 end
 
-
-# as the last route, add
 get '/contacts/new' do
   erb :new_contact
 end
@@ -70,7 +65,6 @@ end
 delete "/contacts/:id" do
   @contact = Contact.get(params[:id].to_i)
   if @contact
-    # Contact.remove_contact(@contact)
     @contact.destroy
     redirect to("/contacts")
   else
